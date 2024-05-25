@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "240213191439",
+    "project_id": "yajhaz",
+    "storage_bucket": "yajhaz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240213191439:android:f4fd6f73a7a85af98f6c7a",
+        "android_client_info": {
+          "package_name": "com.mycash.yajhaz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5qHSZ8YW2NhyfLDDleYXZ55mRDCqu3Q0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240213191439:android:029562a5e56d375a8f6c7a",
+        "android_client_info": {
+          "package_name": "com.mycash.yajhaz.stage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5qHSZ8YW2NhyfLDDleYXZ55mRDCqu3Q0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
