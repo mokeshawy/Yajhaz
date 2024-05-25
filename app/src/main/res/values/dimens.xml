@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="strokeWidth">1dp</dimen>
+    <!--    SPACING-->
+    <dimen name="tiny">@dimen/_4sdp</dimen>
+    <dimen name="xsml">@dimen/_7sdp</dimen>
+    <dimen name="sml">@dimen/_12sdp</dimen>
+    <dimen name="reg">@dimen/_15sdp</dimen>
+    <dimen name="med">@dimen/_20sdp</dimen>
+    <dimen name="lrg">@dimen/_28sdp</dimen>
+    <dimen name="xlrg">@dimen/_36sdp</dimen>
+</resources>
