@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
     id("androidx.navigation.safeargs")
     id("kotlin-parcelize")
     id("com.google.gms.google-services")
@@ -43,7 +44,7 @@ android {
 
     flavorDimensions.add("version")
     productFlavors {
-        
+
         create("staging") {
             dimension = "version"
             versionNameSuffix = ".stage"
@@ -104,15 +105,15 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
     // ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.0")
 
     //ViewModels delegation extensions for activity
     implementation("androidx.activity:activity-ktx:1.9.0")
-    implementation("androidx.fragment:fragment-ktx:1.7.0")
+    implementation("androidx.fragment:fragment-ktx:1.7.1")
 
     // LiveData
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.0")
 
     //process-phoenix
     implementation("com.jakewharton:process-phoenix:3.0.0")
@@ -166,7 +167,7 @@ dependencies {
     implementation("com.google.android.play:app-update-ktx:2.1.0")
 
     //paging3
-    val pagingVersion = "3.2.1"
+    val pagingVersion = "3.3.0"
     implementation("androidx.paging:paging-runtime-ktx:$pagingVersion")
 
     implementation("androidx.work:work-runtime-ktx:2.9.0")
@@ -177,10 +178,10 @@ dependencies {
 
 
     //pluto
-//    debugimplementation("com.plutolib:pluto:2.0.6")
-//    releaseimplementation("com.plutolib:pluto-no-op:2.0.6")
-//    debugimplementation("com.plutolib.plugins:network:2.0.6")
-//    releaseimplementation("com.plutolib.plugins:network-no-op:2.0.6")
+    debugImplementation("com.plutolib:pluto:2.0.6")
+    releaseImplementation("com.plutolib:pluto-no-op:2.0.6")
+    debugImplementation("com.plutolib.plugins:network:2.0.6")
+    releaseImplementation("com.plutolib.plugins:network-no-op:2.0.6")
 
 
     // Zxing
