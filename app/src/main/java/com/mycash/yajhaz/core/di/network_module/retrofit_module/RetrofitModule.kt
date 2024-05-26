@@ -52,9 +52,11 @@ object RetrofitModule {
     @Provides
     @Named("LoggingInterceptor")
     @Singleton
-    fun httpLoggingInterceptor() = HttpLoggingInterceptor { message ->
-        Timber.tag("OkHttp").d(message)
-    }.setLevel(HttpLoggingInterceptor.Level.BODY)
+    fun httpLoggingInterceptor(): Interceptor {
+        return HttpLoggingInterceptor { message ->
+            Timber.tag("OkHttp").d(message)
+        }.setLevel(HttpLoggingInterceptor.Level.BODY)
+    }
 
 
     @Singleton

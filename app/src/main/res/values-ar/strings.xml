@@ -12,4 +12,7 @@
     <string name="password">باسورد</string>
     <string name="dontHaveAnAccount">ليس لديك حساب ؟</string>
     <string name="signup">تسجيل</string>
+    <string name="pleaseEnterYourEmail">أدخل بريدك الإلكتروني</string>
+    <string name="pleaseEnterAValidEmail">من فضلك ادخل ايميل صحيح</string>
+    <string name="pleaseEnterYourPassword">Please enter your password</string>
 </resources>

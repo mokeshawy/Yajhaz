@@ -21,9 +21,9 @@ import com.mycash.yajhaz.core.error.ResponseUnAuthorizedError
 import com.mycash.yajhaz.core.error.YajhazError
 import com.mycash.yajhaz.core.error.YajhazErrorHandler
 import com.mycash.yajhaz.core.token_utils.TokenHandler
-import com.mycash.yajhaz.core.utils.utils.dialogs.snack_bar.YajhazSnackBarBuilder
-import com.mycash.yajhaz.core.utils.utils.dialogs.yajhaz_progress_dialog.YajhazProgressDialog
-import com.mycash.yajhaz.core.utils.utils.showToast
+import com.mycash.yajhaz.core.utils.dialogs.snack_bar.YajhazSnackBarBuilder
+import com.mycash.yajhaz.core.utils.dialogs.yajhaz_progress_dialog.YajhazProgressDialog
+import com.mycash.yajhaz.core.utils.showToast
 import javax.inject.Inject
 
 abstract class BaseFragment<dataBinding : ViewDataBinding> : Fragment(), NetworkAwareComponent {

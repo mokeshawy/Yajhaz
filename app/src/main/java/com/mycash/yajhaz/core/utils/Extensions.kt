@@ -34,3 +34,7 @@ fun String.containsArabicLetters(): Boolean {
     return false
 }
 
+
+fun String.isInvalidEmail(): Boolean {
+    return !Regex("^[\\w-.]+@([\\w-]+.)+[\\w-]{2,4}$").matches(this)
+}

@@ -26,6 +26,9 @@ class FailedToDecodeJwt(message: String? = null, cause: Throwable? = null) : Yab
 class RefreshTokenNotFound(message: String? = null, cause: Throwable? = null) : YabraaErrorException(message, cause)
 
 @Keep
+class  EmptyEmail(message: String? = null, cause: Throwable? = null) : YabraaErrorException(message, cause)
+
+@Keep
 class InvalidEmail(message: String? = null, cause: Throwable? = null) : YabraaErrorException(message, cause)
 
 
@@ -37,7 +40,7 @@ class EmptyName(message: String? = null, cause: Throwable? = null) : YabraaError
 class EmptyPassword(message: String? = null, cause: Throwable? = null) : YabraaErrorException(message, cause)
 
 @Keep
-class PasswordLetThanSixCharacter(message: String? = null, cause: Throwable? = null) : YabraaErrorException(message, cause)
+class PasswordLetThanEightCharacter(message: String? = null, cause: Throwable? = null) : YabraaErrorException(message, cause)
 
 @Keep
 class OperationMessage(message: String? = null, cause: Throwable? = null) : YabraaErrorException(message, cause)

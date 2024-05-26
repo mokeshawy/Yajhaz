@@ -25,7 +25,7 @@ private fun String.getJsonPayload(onError: (YajhazError) -> Unit = {}): String? 
 private fun String.getJwtError(e: Exception): YajhazError {
     return YajhazError.E(
         exception = FailedToDecodeJwt(cause = e),
-        logMessageEn = "failed to decode JWT for token: $this",
+        logMessage = "failed to decode JWT for token: $this",
         logTag = TokensManager::class.java.simpleName
     )
 }
