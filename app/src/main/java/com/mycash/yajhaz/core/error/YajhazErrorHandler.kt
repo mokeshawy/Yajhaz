@@ -1,5 +1,5 @@
 package com.mycash.yajhaz.core.error
 
-interface YajhazErrorErrorHandler {
+interface YajhazErrorHandler {
     fun handleError(error: YajhazError, callback: YajhazError.() -> Unit = {})
 }

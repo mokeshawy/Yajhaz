@@ -19,7 +19,7 @@ import com.mycash.yajhaz.core.error.IoException
 import com.mycash.yajhaz.core.error.ResponseError
 import com.mycash.yajhaz.core.error.ResponseUnAuthorizedError
 import com.mycash.yajhaz.core.error.YajhazError
-import com.mycash.yajhaz.core.error.YajhazErrorErrorHandler
+import com.mycash.yajhaz.core.error.YajhazErrorHandler
 import com.mycash.yajhaz.core.token_utils.TokenHandler
 import com.mycash.yajhaz.core.utils.utils.dialogs.snack_bar.YajhazSnackBarBuilder
 import com.mycash.yajhaz.core.utils.utils.dialogs.yajhaz_progress_dialog.YajhazProgressDialog
@@ -87,7 +87,7 @@ abstract class BaseFragment<dataBinding : ViewDataBinding> : Fragment(), Network
 
 
     fun YajhazError.handleError(callback: YajhazError.() -> Unit) {
-        (activity as? YajhazErrorErrorHandler)?.handleError(this) {
+        (activity as? YajhazErrorHandler)?.handleError(this) {
             when (exception) {
                 is GeneralException -> handleGeneralExceptionError()
                 is IoException -> handleIoExceptionError()
