@@ -15,4 +15,10 @@
     <string name="pleaseEnterYourEmail">أدخل بريدك الإلكتروني</string>
     <string name="pleaseEnterAValidEmail">من فضلك ادخل ايميل صحيح</string>
     <string name="pleaseEnterYourPassword">Please enter your password</string>
+
+    <string name="warning">إنتبه !</string>
+    <string name="ok">حسناً</string>
+
+    <string name="internetConnection">الرجاء التحقق من اتصال الانترنت الخاص بك</string>
+
 </resources>

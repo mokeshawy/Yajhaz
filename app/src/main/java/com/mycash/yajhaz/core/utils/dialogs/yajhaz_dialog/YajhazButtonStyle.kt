@@ -1,4 +1,4 @@
-package com.mycash.yajhaz.core.utils.dialogs.yabraa_dialog
+package com.mycash.yajhaz.core.utils.dialogs.yajhaz_dialog
 
 import android.content.res.ColorStateList
 import androidx.core.content.ContextCompat

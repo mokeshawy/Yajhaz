@@ -15,4 +15,10 @@
     <string name="pleaseEnterAValidEmail">Please enter a valid email</string>
     <string name="pleaseEnterYourPassword">Please enter your password</string>
 
+    <string name="warning">Warning !</string>
+    <string name="ok">OK</string>
+
+    <string name="internetConnection">Please check your internet connection</string>
+
+
 </resources>
