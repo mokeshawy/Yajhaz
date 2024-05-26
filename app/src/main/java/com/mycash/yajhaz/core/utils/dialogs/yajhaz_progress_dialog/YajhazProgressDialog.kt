@@ -1,8 +1,8 @@
-package com.mycash.yajhaz.core.utils.utils.dialogs.yajhaz_progress_dialog
+package com.mycash.yajhaz.core.utils.dialogs.yajhaz_progress_dialog
 
 import android.app.Activity
 import android.app.AlertDialog
-import com.mycash.yajhaz.core.utils.utils.CommonUtils.setLayoutParams
+import com.mycash.yajhaz.core.utils.CommonUtils.setLayoutParams
 import com.mycash.yajhaz.databinding.LayoutYajhazProgressDialogBinding
 import javax.inject.Inject
 

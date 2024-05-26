@@ -1,4 +1,4 @@
-package com.mycash.yajhaz.core.utils.utils.dialogs.yabraa_dialog
+package com.mycash.yajhaz.core.utils.dialogs.yabraa_dialog
 
 import android.app.Activity
 import android.app.Dialog
@@ -14,8 +14,8 @@ import androidx.core.text.toSpanned
 import androidx.core.view.isVisible
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.mycash.yajhaz.R
-import com.mycash.yajhaz.core.utils.utils.CommonUtils
-import com.mycash.yajhaz.core.utils.utils.localize
+import com.mycash.yajhaz.core.utils.CommonUtils
+import com.mycash.yajhaz.core.utils.localize
 import com.mycash.yajhaz.databinding.LayoutYajhazDialogBinding
 
 class YajhazDialogBuilder(activity: Activity, @StyleRes style: Int = R.style.CustomDialogTheme) :

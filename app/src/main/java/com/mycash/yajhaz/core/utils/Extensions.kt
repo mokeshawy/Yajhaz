@@ -1,4 +1,4 @@
-package com.mycash.yajhaz.core.utils.utils
+package com.mycash.yajhaz.core.utils
 
 import android.content.Context
 import android.view.View

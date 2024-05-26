@@ -1,4 +1,4 @@
-package com.mycash.yajhaz.core.utils.utils
+package com.mycash.yajhaz.core.utils
 
 import android.annotation.SuppressLint
 import android.app.Activity
