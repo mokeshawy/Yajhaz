@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class LoginResponse(
     @SerializedName("addresses")
-    val addresses: List<Addresse>,
+    val addresses: List<Address>,
     @SerializedName("balance")
     val balance: String,
     @SerializedName("email")

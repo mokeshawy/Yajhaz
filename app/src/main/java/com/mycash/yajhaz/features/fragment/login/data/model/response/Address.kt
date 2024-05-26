@@ -3,7 +3,7 @@ package com.mycash.yajhaz.features.fragment.login.data.model.response
 
 import com.google.gson.annotations.SerializedName
 
-data class Addresse(
+data class Address(
     @SerializedName("address")
     val address: Any,
     @SerializedName("apartment")
