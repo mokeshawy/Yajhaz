@@ -3,6 +3,7 @@ package com.mycash.yajhaz.core.di.network_module.retrofit_module
 import android.content.Context
 import com.google.gson.Gson
 import com.mycash.yajhaz.R
+import com.mycash.yajhaz.core.local_helper.LocaleHelper
 import com.mycash.yajhaz.core.token_utils.TokenHandler
 import com.pluto.plugins.network.PlutoInterceptor
 import dagger.Module
@@ -39,10 +40,18 @@ object RetrofitModule {
 
     @Provides
     @Named("AuthInterceptor")
-    fun provideAuthInterceptor(tokenHandler: TokenHandler): Interceptor =
+    fun provideAuthInterceptor(
+        tokenHandler: TokenHandler,
+        localeHelper: LocaleHelper
+    ): Interceptor =
         Interceptor { chain ->
             val newBuilder = chain.request().newBuilder()
             tokenHandler.getToken()?.let { newBuilder.addHeader("Authorization", "Bearer $it") }
+            val language = when {
+                localeHelper.isEnglishSelected() -> "en"
+                else -> "ar"
+            }
+            newBuilder.addHeader("lang", language)
             newBuilder.build().let { chain.proceed(it) }
         }
 
@@ -52,9 +61,11 @@ object RetrofitModule {
     @Provides
     @Named("LoggingInterceptor")
     @Singleton
-    fun httpLoggingInterceptor() = HttpLoggingInterceptor { message ->
-        Timber.tag("OkHttp").d(message)
-    }.setLevel(HttpLoggingInterceptor.Level.BODY)
+    fun httpLoggingInterceptor(): Interceptor {
+        return HttpLoggingInterceptor { message ->
+            Timber.tag("OkHttp").d(message)
+        }.setLevel(HttpLoggingInterceptor.Level.BODY)
+    }
 
 
     @Singleton

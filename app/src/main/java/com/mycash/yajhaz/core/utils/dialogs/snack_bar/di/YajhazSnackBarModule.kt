@@ -1,7 +1,7 @@
-package com.mycash.yajhaz.core.utils.utils.dialogs.snack_bar.di
+package com.mycash.yajhaz.core.utils.dialogs.snack_bar.di
 
 import android.app.Activity
-import com.mycash.yajhaz.core.utils.utils.dialogs.snack_bar.YajhazSnackBarBuilder
+import com.mycash.yajhaz.core.utils.dialogs.snack_bar.YajhazSnackBarBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

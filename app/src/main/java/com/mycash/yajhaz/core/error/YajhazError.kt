@@ -5,15 +5,13 @@ import timber.log.Timber
 sealed class YajhazError {
     var exception: Throwable? = GeneralException()
     var extraData: Any? = null
-    var logMessageEn: String? = null
-    var logMessageAr: String? = null
+    var logMessage: String? = null
     var logTag: String = "Yabraa Error"
     var logPriority: ErrorLogPriority = ErrorLogPriority.ERROR
 
     fun logError() {
         val message = logTag +
-                "/ Log messageEn: $logMessageEn" +
-                "/ Log messageAr: $logMessageAr" +
+                "/ Log message: $logMessage" +
                 "/ Extra Data: $extraData"
         Timber.log(logPriority.level, exception, message)
     }
@@ -21,15 +19,13 @@ sealed class YajhazError {
 
     class E(
         exception: Exception,
-        logMessageEn: String? = null,
-        logMessageAr: String? = null,
+        logMessage: String? = null,
         logTag: String? = null,
         extraData: Any? = null
     ) : YajhazError() {
         init {
             this.logPriority = ErrorLogPriority.ERROR
-            this.logMessageEn = logMessageEn
-            this.logMessageAr = logMessageAr
+            this.logMessage = logMessage
             logTag?.let { this.logTag = it }
             this.exception = exception
             this.extraData = extraData
@@ -39,15 +35,13 @@ sealed class YajhazError {
 
     class W(
         exception: Exception,
-        logMessageEn: String? = null,
-        logMessageAr: String? = null,
+        logMessage: String? = null,
         logTag: String? = null,
         extraData: Any? = null
     ) : YajhazError() {
         init {
             this.logPriority = ErrorLogPriority.WARN
-            this.logMessageEn = logMessageEn
-            this.logMessageAr = logMessageAr
+            this.logMessage = logMessage
             logTag?.let { this.logTag = it }
             this.exception = exception
             this.extraData = extraData
@@ -57,15 +51,13 @@ sealed class YajhazError {
 
     class I(
         exception: Exception,
-        logMessageEn: String? = null,
-        logMessageAr: String? = null,
+        logMessage: String? = null,
         logTag: String? = null,
         extraData: Any? = null
     ) : YajhazError() {
         init {
             this.logPriority = ErrorLogPriority.INFO
-            this.logMessageEn = logMessageEn
-            this.logMessageAr = logMessageAr
+            this.logMessage = logMessage
             logTag?.let { this.logTag = it }
             this.exception = exception
             this.extraData = extraData

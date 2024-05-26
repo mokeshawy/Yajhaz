@@ -39,23 +39,23 @@ abstract class BaseRepository<RequestDto, ResponseDto> {
 
     private fun getIoExceptionError(e: IOException) = YajhazError.E(
         exception = IoException(cause = e),
-        logMessageEn = "Failed to load data from Api with IOException:",
+        logMessage = "Failed to load data from Api with IOException:",
     )
 
     private fun getGeneralExceptionError(e: Exception) = YajhazError.E(
         exception = GeneralException(cause = e),
-        logMessageEn = "Failed to load data from Api with General exception",
+        logMessage = "Failed to load data from Api with General exception",
     )
 
     private fun getNotSuccessfulResponseError(response: Response<*>) = YajhazError.E(
         exception = ResponseError(),
-        logMessageEn = "Api request to url: ${response.raw().request.url}: failed with code ${response.code()}",
+        logMessage = "Api request to url: ${response.raw().request.url}: failed with code ${response.code()}",
         extraData = response
     )
 
     private fun getUnauthorizedError(response: Response<*>) = YajhazError.E(
         exception = ResponseUnAuthorizedError(),
-        logMessageEn = "Api request to url: ${response.raw().request.url}: failed with code ${response.code()}",
+        logMessage = "Api request to url: ${response.raw().request.url}: failed with code ${response.code()}",
         extraData = response
     )
 }

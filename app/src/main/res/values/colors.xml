@@ -4,4 +4,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yalow">#FFD279</color>
     <color name="green">#00957B</color>
+    <color name="dimGray">#484848</color>
+    <color name="silver">#B3B3B3</color>
+    <color name="lightGray">#E4E4E4</color>
+    <color name="ghostWhite">#F8F8F4</color>
+    <color name="spanishGray">#9C9C9C</color>
 </resources>

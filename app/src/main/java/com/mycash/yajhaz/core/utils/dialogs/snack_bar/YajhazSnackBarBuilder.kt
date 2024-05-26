@@ -1,4 +1,4 @@
-package com.mycash.yajhaz.core.utils.utils.dialogs.snack_bar
+package com.mycash.yajhaz.core.utils.dialogs.snack_bar
 
 
 import android.annotation.SuppressLint

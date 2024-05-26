@@ -14,7 +14,7 @@
 
     <style name="Widget.MaterialComponents.Button.Yajhaz">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">@dimen/_41sdp</item>
+        <item name="android:layout_height">@dimen/_44sdp</item>
         <item name="cornerRadius">@dimen/_13sdp</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:insetBottom">0dp</item>
@@ -32,4 +32,30 @@
         <item name="android:windowMinWidthMajor">0dp</item>
         <item name="android:windowMinWidthMinor">0dp</item>
     </style>
+
+
+    <style name="YajhazSmallCard" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialCardView.Yajhaz
+        </item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay.MaterialCardView.Yajhaz" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">@dimen/_34sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_34sdp</item>
+    </style>
+
+
+    <style name="textFieldStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_46sdp</item>
+        <item name="android:background">@drawable/edit_text_border</item>
+        <item name="android:textColor">@color/dimGray</item>
+        <item name="android:textColorHint">@color/lightGray</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
 </resources>
