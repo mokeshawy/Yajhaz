@@ -3,4 +3,13 @@
     <string name="app_name">Yajhaz</string>
 
     <string name="genericErrorMessage">حدث خطأ، حاول مرة آخرى</string>
+    <string name="log_in">تسجيل دخول</string>
+    <string name="email">الإيميل.</string>
+    <string name="writeYourEmail">إكتب بريدك الإلكتروني</string>
+    <string name="write8CharacterAtLeast">اكتب 8 أحرف على الأقل</string>
+    <string name="forgetThePassword">هل نسيت كلمة المرور؟</string>
+    <string name="logIn">تسجيل دخول</string>
+    <string name="password">باسورد</string>
+    <string name="dontHaveAnAccount">ليس لديك حساب ؟</string>
+    <string name="signup">تسجيل</string>
 </resources>
