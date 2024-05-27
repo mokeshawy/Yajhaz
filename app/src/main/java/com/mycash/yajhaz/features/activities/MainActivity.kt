@@ -1,9 +1,11 @@
 package com.mycash.yajhaz.features.activities
 
 import android.net.Network
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
@@ -29,6 +31,7 @@ class MainActivity : AppCompatActivity(), NetworkAwareComponent, YajhazErrorHand
         enableEdgeToEdge()
         setContentView(binding.root)
         hideSystemBars(binding.root)
+        handleNotificationPermission()
 
     }
 
@@ -63,4 +66,15 @@ class MainActivity : AppCompatActivity(), NetworkAwareComponent, YajhazErrorHand
         callback(error)
     }
 
+
+    private fun handleNotificationPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            permissionRequest.launch(android.Manifest.permission.POST_NOTIFICATIONS)
+        }
+    }
+
+    private val permissionRequest =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) {
+            /* no need handle action here */
+        }
 }
