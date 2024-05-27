@@ -20,12 +20,29 @@
             app:popExitAnim="@android:anim/fade_out"
             app:popUpTo="@string/logIn" />
 
+        <action
+            android:id="@+id/actionLoginFragmentToHomeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/nav_graph" />
+
     </fragment>
 
 
     <fragment
         android:id="@+id/signupFragment"
         android:name="com.mycash.yajhaz.features.fragment.signup.presentation.SignupFragment"
-        tools:layout="@layout/fragment_signup" />
+        tools:layout="@layout/fragment_signup">
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mycash.yajhaz.features.fragment.home.presentation.HomeFragment"
+        tools:layout="@layout/fragment_home" />
 
 </navigation>

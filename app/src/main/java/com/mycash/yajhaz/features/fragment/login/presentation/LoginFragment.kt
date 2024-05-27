@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.annotation.StringRes
 import androidx.fragment.app.viewModels
+import androidx.hilt.navigation.fragment.hiltNavGraphViewModels
 import androidx.lifecycle.lifecycleScope
 import com.mycash.yajhaz.R
 import com.mycash.yajhaz.core.base_fragment.BaseFragment
@@ -11,8 +12,8 @@ import com.mycash.yajhaz.core.base_fragment.navigate
 import com.mycash.yajhaz.core.error.EmptyEmail
 import com.mycash.yajhaz.core.error.EmptyPassword
 import com.mycash.yajhaz.core.error.InvalidEmail
-import com.mycash.yajhaz.core.error.ResponseMessageException
 import com.mycash.yajhaz.core.error.PasswordLessThanEightCharacter
+import com.mycash.yajhaz.core.error.ResponseMessageException
 import com.mycash.yajhaz.core.error.YajhazError
 import com.mycash.yajhaz.core.state.State
 import com.mycash.yajhaz.core.utils.dialogs.snack_bar.YajhazSnackBarBuilder
@@ -27,7 +28,9 @@ import kotlinx.coroutines.launch
 class LoginFragment : BaseFragment<FragmentLoginBinding>() {
 
     override val binding by lazy { FragmentLoginBinding.inflate(layoutInflater) }
-    private val viewModel: LoginViewModel by viewModels()
+    private val viewModel: LoginViewModel by hiltNavGraphViewModels(R.id.nav_graph)
+
+    private val loginEntities get() = viewModel.getLoginEntities()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -102,9 +105,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
                 is State.Error -> it.error.handleLoginResponseError()
                 is State.Initial -> {}
                 is State.Loading -> showProgressDialog()
-                is State.Success -> {
-                    //TODO NAVIGATE TO HOME SCREEN
-                }
+                is State.Success -> navigateToHomeScreen()
             }
         }
     }
@@ -126,5 +127,10 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
             .setMessage(message)
             .setTopButton(R.string.ok) {}
             .show()
+    }
+
+    private fun navigateToHomeScreen() {
+        viewModel.setLoginEntity(loginEntities)
+        navigate(R.id.actionLoginFragmentToHomeFragment)
     }
 }

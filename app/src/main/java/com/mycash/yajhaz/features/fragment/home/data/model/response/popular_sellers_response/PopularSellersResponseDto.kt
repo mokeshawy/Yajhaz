@@ -2,10 +2,11 @@ package com.mycash.yajhaz.features.fragment.home.data.model.response.popular_sel
 
 
 import com.google.gson.annotations.SerializedName
+import com.mycash.yajhaz.features.fragment.home.data.model.response.common.TrendingAndPopularSellersResponse
 
-data class PopularResponseDto(
+data class PopularSellersResponseDto(
     @SerializedName("data")
-    val `data`: List<PopularResponse>,
+    val `data`: List<TrendingAndPopularSellersResponse>,
     @SerializedName("message")
     val message: String,
     @SerializedName("response_code")

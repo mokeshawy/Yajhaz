@@ -5,21 +5,21 @@ import com.google.gson.annotations.SerializedName
 
 data class Address(
     @SerializedName("address")
-    val address: Any,
+    val address: String,
     @SerializedName("apartment")
     val apartment: String,
     @SerializedName("building")
     val building: String,
     @SerializedName("floor")
-    val floor: Any,
+    val floor: Int,
     @SerializedName("id")
     val id: Int,
     @SerializedName("lat")
-    val lat: String,
+    val lat: Double,
     @SerializedName("lng")
-    val lng: String,
+    val lng: Double,
     @SerializedName("name")
-    val name: Any,
+    val name: String,
     @SerializedName("street")
     val street: String
 )

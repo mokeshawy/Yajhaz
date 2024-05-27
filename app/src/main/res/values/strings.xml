@@ -37,6 +37,10 @@
     <string name="passwordNotMatched">The password and confirmation password do not match</string>
     <string name="theRegisterAccountHasBeenSuccess">The account has been registered successfully. Go to log in</string>
     <string name="done">Done</string>
+    <string name="home">Home</string>
+    <string name="categories">Categories.</string>
+    <string name="popularNow">Popular now.</string>
+    <string name="trendingNow">Trending now.</string>
 
 
 </resources>

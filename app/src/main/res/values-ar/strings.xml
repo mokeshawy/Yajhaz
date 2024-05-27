@@ -38,6 +38,10 @@
     <string name="passwordNotMatched">كلمة المرور وتأكيد كلمة المرور غير متطابقتان</string>
     <string name="theRegisterAccountHasBeenSuccess">لقد تم تسجيل الحساب بنجاح اذهب لتسجيل الدخول</string>
     <string name="done">تم</string>
+    <string name="home">الرئيسية</string>
+    <string name="categories">تصنيفات.</string>
+    <string name="popularNow">الاكثر طلبا.</string>
+    <string name="trendingNow">المتصدر الان</string>
 
 
 </resources>
