@@ -9,6 +9,23 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.mycash.yajhaz.features.fragment.login.presentation.LoginFragment"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/actionLoginFragmentToSignupFragment"
+            app:destination="@id/signupFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@string/logIn" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.mycash.yajhaz.features.fragment.signup.presentation.SignupFragment"
+        tools:layout="@layout/fragment_signup" />
 
 </navigation>

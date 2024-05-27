@@ -7,11 +7,12 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.mycash.yajhaz.R
 import com.mycash.yajhaz.core.base_fragment.BaseFragment
+import com.mycash.yajhaz.core.base_fragment.navigate
 import com.mycash.yajhaz.core.error.EmptyEmail
 import com.mycash.yajhaz.core.error.EmptyPassword
 import com.mycash.yajhaz.core.error.InvalidEmail
-import com.mycash.yajhaz.core.error.OperationMessage
-import com.mycash.yajhaz.core.error.PasswordLetThanEightCharacter
+import com.mycash.yajhaz.core.error.ResponseMessageException
+import com.mycash.yajhaz.core.error.PasswordLessThanEightCharacter
 import com.mycash.yajhaz.core.error.YajhazError
 import com.mycash.yajhaz.core.state.State
 import com.mycash.yajhaz.core.utils.dialogs.snack_bar.YajhazSnackBarBuilder
@@ -45,7 +46,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
 
 
     private fun FragmentLoginBinding.setOnSignupClicked() = singUpTv.setOnClickListener {
-        //TODO NAVIGATE TO SIGNUP SCREEN
+        navigate(R.id.actionLoginFragmentToSignupFragment)
     }
 
 
@@ -82,7 +83,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
                 is EmptyEmail -> showSnackBarError(R.string.pleaseEnterYourEmail)
                 is InvalidEmail -> showSnackBarError(R.string.pleaseEnterAValidEmail)
                 is EmptyPassword -> showSnackBarError(R.string.pleaseEnterYourPassword)
-                is PasswordLetThanEightCharacter -> showSnackBarError(R.string.write8CharacterAtLeast)
+                is PasswordLessThanEightCharacter -> showSnackBarError(R.string.write8CharacterAtLeast)
             }
         }
     }
@@ -113,7 +114,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
         handleError {
             val message = logMessage ?: ""
             when (exception) {
-                is OperationMessage -> showLoginResponsePopupError(message)
+                is ResponseMessageException -> showLoginResponsePopupError(message)
             }
         }
     }

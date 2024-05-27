@@ -19,8 +19,8 @@ class TokensManager @Inject constructor(
 
     override fun getToken() = encryptedSharedPreference.getString(TOKEN_KEY)
     override fun getExpirationDate(): String {
-        val epoch = getToken()?.getPayLoad()?.exp ?: 0L
-        val date = Date(epoch * 1000)
+        val epoch = getToken()?.getPayLoad()?.exp ?: 0.0
+        val date = Date(epoch.toLong() * 1000)
         val dateFormat = SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault())
         return dateFormat.format(date)
     }
