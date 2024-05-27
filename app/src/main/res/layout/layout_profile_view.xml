@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/userNameTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/tt_commons_medium"
+            android:textColor="@color/dimGray"
+            android:textSize="@dimen/_27sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Hello Ahmed" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/addressTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_17sdp"
+            android:fontFamily="@font/tt_commons_regular"
+            android:maxLines="1"
+            android:textColor="@color/dimGray"
+            android:textSize="@dimen/_20sdp"
+            app:autoSizeMinTextSize="@dimen/_10sdp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toStartOf="@+id/backRightIv"
+            app:layout_constraintStart_toStartOf="@+id/userNameTv"
+            app:layout_constraintTop_toBottomOf="@+id/userNameTv"
+            tools:text="Riyadh ( 15 -Jasmine neighbo..." />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backRightIv"
+            android:layout_width="@dimen/_7sdp"
+            android:layout_height="@dimen/_14sdp"
+            android:layout_marginEnd="@dimen/_87sdp"
+            android:src="@drawable/ic_vector_arrow_right"
+            app:layout_constraintBottom_toBottomOf="@+id/addressTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addressTv" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/filterIv"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:src="@drawable/ic_vector_filter"
+            app:layout_constraintBottom_toBottomOf="@+id/searchIv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/searchIv"
+            app:layout_constraintTop_toTopOf="@+id/searchIv" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/searchIv"
+            android:layout_width="@dimen/_34sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/ic_vector_search"
+            app:layout_constraintBottom_toBottomOf="@+id/searchTil"
+            app:layout_constraintEnd_toStartOf="@+id/filterIv"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/searchTil"
+            app:layout_constraintTop_toTopOf="@+id/searchTil" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/searchTil"
+            style="?attr/textInputOutlinedDenseStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:shadowColor="@color/white"
+            app:hintEnabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/searchIv"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/addressTv"
+            app:layout_constraintTop_toBottomOf="@+id/addressTv">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchEt"
+                style="@style/textFieldStyle"
+                android:hint="@string/writeYourEmail"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

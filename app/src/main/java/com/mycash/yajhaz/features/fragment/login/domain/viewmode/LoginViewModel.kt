@@ -11,6 +11,7 @@ import com.mycash.yajhaz.core.state.State
 import com.mycash.yajhaz.core.utils.isInvalidEmail
 import com.mycash.yajhaz.features.fragment.login.data.model.response.LoginResponseDto
 import com.mycash.yajhaz.features.fragment.login.domain.model.LoginUiModel
+import com.mycash.yajhaz.features.fragment.login.domain.model.entities.LoginEntity
 import com.mycash.yajhaz.features.fragment.login.domain.usecase.LoginUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -27,6 +28,7 @@ class LoginViewModel @Inject constructor(private val loginUseCase: LoginUseCase)
     private val _validationState = MutableStateFlow<State<Any>>(State.Initial())
     val validationState = _validationState.asStateFlow()
 
+    private var _loginEntity: LoginEntity? = null
 
     fun validationInput(loginUiModel: LoginUiModel) = viewModelScope.launch {
         loginUiModel.validationInput()
@@ -38,6 +40,7 @@ class LoginViewModel @Inject constructor(private val loginUseCase: LoginUseCase)
         password.isEmpty() -> _validationState.emit(getValidationError(EmptyPassword()))
         password.length < 8 ->
             _validationState.emit(getValidationError(PasswordLessThanEightCharacter()))
+
         else -> onValidInput(this)
     }
 
@@ -55,5 +58,22 @@ class LoginViewModel @Inject constructor(private val loginUseCase: LoginUseCase)
         loginUseCase(loginUiModel.toLogin()).collect {
             _loginResponseState.emit(it)
         }
+    }
+
+    fun getLoginEntities() = loginUseCase.getLoginEntity()
+
+    fun setLoginEntity(loginEntity: LoginEntity?) {
+        this._loginEntity = loginEntity
+    }
+
+    fun getLoginEntity() = this._loginEntity
+
+    private fun resetLoginEntity() {
+        this._loginEntity = null
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        resetLoginEntity()
     }
 }

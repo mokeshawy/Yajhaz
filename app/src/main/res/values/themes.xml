@@ -51,11 +51,15 @@
 
     <style name="textFieldStyle">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/_46sdp</item>
+        <item name="android:layout_height">@dimen/_38sdp</item>
         <item name="android:background">@drawable/edit_text_border</item>
         <item name="android:textColor">@color/dimGray</item>
         <item name="android:textColorHint">@color/lightGray</item>
         <item name="android:textAlignment">viewStart</item>
     </style>
 
+    <style name="ShapeAppearanceOverlay.Gallery" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_7sdp</item>
+    </style>
 </resources>

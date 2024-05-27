@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class TrendingAndPopularSellersResponse(
     @SerializedName("address")
-    val address: String,
+    val address: String? = null,
     @SerializedName("appointments")
     val appointments: String,
     @SerializedName("categories")
@@ -25,9 +25,9 @@ data class TrendingAndPopularSellersResponse(
     @SerializedName("is_favorite")
     val isFavorite: Boolean,
     @SerializedName("lat")
-    val lat: String,
+    val lat: String? = null,
     @SerializedName("lng")
-    val lng: String,
+    val lng: String? = null,
     @SerializedName("logo")
     val logo: String,
     @SerializedName("name")
