@@ -35,20 +35,33 @@ class InvalidEmail(message: String? = null, cause: Throwable? = null) : YabraaEr
 @Keep
 class EmptyName(message: String? = null, cause: Throwable? = null) : YabraaErrorException(message, cause)
 
+@Keep
+class NameLessThanFourteenCharacter(message: String? = null, cause: Throwable? = null) :
+    YabraaErrorException(message, cause)
 
 @Keep
 class EmptyPassword(message: String? = null, cause: Throwable? = null) : YabraaErrorException(message, cause)
 
 @Keep
-class PasswordLetThanEightCharacter(message: String? = null, cause: Throwable? = null) : YabraaErrorException(message, cause)
+class PasswordLessThanEightCharacter(message: String? = null, cause: Throwable? = null) :
+    YabraaErrorException(message, cause)
 
 @Keep
-class OperationMessage(message: String? = null, cause: Throwable? = null) : YabraaErrorException(message, cause)
+class ResponseMessageException(message: String? = null, cause: Throwable? = null) :
+    YabraaErrorException(message, cause)
 
 @Keep
 class EmptyPhoneNumber(message: String? = null, cause: Throwable? = null) : YabraaErrorException(message, cause)
 
 @Keep
+class PhoneNumberLessThanElevenNumber(message: String? = null, cause: Throwable? = null) :
+    YabraaErrorException(message, cause)
+@Keep
 class EmptyConfirmPassword(message: String? = null, cause: Throwable? = null) : YabraaErrorException(message, cause)
+
+@Keep
+class ConfirmPasswordLessThanEightCharacter(message: String? = null, cause: Throwable? = null) :
+    YabraaErrorException(message, cause)
+
 @Keep
 class PasswordNotMatched(message: String? = null, cause: Throwable? = null) : YabraaErrorException(message, cause)

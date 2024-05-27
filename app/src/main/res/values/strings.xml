@@ -9,7 +9,7 @@
     <string name="forgetThePassword">Forget the password?</string>
     <string name="logIn">Log in</string>
     <string name="password">Password</string>
-    <string name="dontHaveAnAccount">Don’t have an account ?</string>
+    <string name="dontHaveAnAccount">Don’t have an account?</string>
     <string name="signup">Sign up</string>
     <string name="pleaseEnterYourEmail">Please enter your email</string>
     <string name="pleaseEnterAValidEmail">Please enter a valid email</string>
@@ -19,6 +19,24 @@
     <string name="ok">OK</string>
 
     <string name="internetConnection">Please check your internet connection</string>
+    <string name="name">Name.</string>
+    <string name="write14Character">Write 14 character</string>
+    <string name="phoneNumber">Phone Number.</string>
+    <string name="write11Numbers">Write 11 numbers</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="writeYourPasswordAgain">Write your password again</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="haveAnAccount">have an account?</string>
+    <string name="enterYourName">Please enter your name</string>
+    <string name="nameLessThanFourteenCharacter">Name Less Than Fourteen Character</string>
+    <string name="pleaseEnterYourPhone">Please enter your phone number</string>
+    <string name="PhoneNumberLessThanElevenNumber">Phone Number Less Than Eleven Number</string>
+    <string name="passwordLessThanEightCharacter">Password Less Than Eight Character</string>
+    <string name="pleaseEnterConfirmPassword">Please enter confirm password</string>
+    <string name="confirmPasswordLessThanEightCharacter">Confirm Password Less Than Eight Character</string>
+    <string name="passwordNotMatched">The password and confirmation password do not match</string>
+    <string name="theRegisterAccountHasBeenSuccess">The account has been registered successfully. Go to log in</string>
+    <string name="done">Done</string>
 
 
 </resources>

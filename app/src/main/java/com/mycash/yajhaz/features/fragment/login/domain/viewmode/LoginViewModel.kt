@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.mycash.yajhaz.core.error.EmptyEmail
 import com.mycash.yajhaz.core.error.EmptyPassword
 import com.mycash.yajhaz.core.error.InvalidEmail
-import com.mycash.yajhaz.core.error.PasswordLetThanEightCharacter
+import com.mycash.yajhaz.core.error.PasswordLessThanEightCharacter
 import com.mycash.yajhaz.core.error.YajhazError
 import com.mycash.yajhaz.core.state.State
 import com.mycash.yajhaz.core.utils.isInvalidEmail
@@ -36,7 +36,8 @@ class LoginViewModel @Inject constructor(private val loginUseCase: LoginUseCase)
         email.isEmpty() -> _validationState.emit(getValidationError(EmptyEmail()))
         email.isInvalidEmail() -> _validationState.emit(getValidationError(InvalidEmail()))
         password.isEmpty() -> _validationState.emit(getValidationError(EmptyPassword()))
-        password.length < 8 -> _validationState.emit(getValidationError(PasswordLetThanEightCharacter()))
+        password.length < 8 ->
+            _validationState.emit(getValidationError(PasswordLessThanEightCharacter()))
         else -> onValidInput(this)
     }
 

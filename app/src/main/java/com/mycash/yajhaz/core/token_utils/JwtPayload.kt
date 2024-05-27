@@ -7,7 +7,7 @@ data class JwtPayload(
     @SerializedName("aud")
     val aud: String,
     @SerializedName("exp")
-    val exp: Long,
+    val exp: Double,
     @SerializedName("iat")
     val iat: Double,
     @SerializedName("jti")

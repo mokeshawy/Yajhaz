@@ -14,11 +14,30 @@
     <string name="signup">تسجيل</string>
     <string name="pleaseEnterYourEmail">أدخل بريدك الإلكتروني</string>
     <string name="pleaseEnterAValidEmail">من فضلك ادخل ايميل صحيح</string>
-    <string name="pleaseEnterYourPassword">Please enter your password</string>
+    <string name="pleaseEnterYourPassword">من فضلك أدخل كلمة المرور</string>
 
     <string name="warning">إنتبه !</string>
     <string name="ok">حسناً</string>
 
     <string name="internetConnection">الرجاء التحقق من اتصال الانترنت الخاص بك</string>
+    <string name="name">الأسم.</string>
+    <string name="write14Character">اكتب 14 حرفا</string>
+    <string name="phoneNumber">رقم الهاتف.</string>
+    <string name="write11Numbers">اكتب 11 رقما</string>
+    <string name="confirmPassword">تأكيد كلمة المرور</string>
+    <string name="writeYourPasswordAgain">اكتب كلمة المرور الخاصة بك مرة أخرى</string>
+    <string name="sign_up">تسجيل</string>
+    <string name="haveAnAccount">لديك حساب؟</string>
+    <string name="enterYourName">من فضلك ادخل الاسم</string>
+    <string name="nameLessThanFourteenCharacter">اسم أقل من أربعة عشر حرفا</string>
+    <string name="pleaseEnterYourPhone">يرجى إدخال رقم الهاتف الخاص بك</string>
+    <string name="PhoneNumberLessThanElevenNumber">رقم الهاتف أقل من أحد عشر رقم</string>
+    <string name="passwordLessThanEightCharacter">كلمة المرور أقل من ثمانية أحرف</string>
+    <string name="pleaseEnterConfirmPassword">من فضلك قم بتأكيد كلمة المرور</string>
+    <string name="confirmPasswordLessThanEightCharacter">تأكيد كلمة المرور أقل من ثمانية أحرف</string>
+    <string name="passwordNotMatched">كلمة المرور وتأكيد كلمة المرور غير متطابقتان</string>
+    <string name="theRegisterAccountHasBeenSuccess">لقد تم تسجيل الحساب بنجاح اذهب لتسجيل الدخول</string>
+    <string name="done">تم</string>
+
 
 </resources>
